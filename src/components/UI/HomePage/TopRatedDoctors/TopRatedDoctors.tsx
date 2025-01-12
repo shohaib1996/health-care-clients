@@ -33,7 +33,8 @@ const TopRatedDoctors = async() => {
               <Card>
                 <Box sx={{
                     "& img": {
-                        height: "246px"
+                        height: "246px",
+                        objectFit: "cover",
                     }
                 }}>
                   <Image
@@ -41,6 +42,7 @@ const TopRatedDoctors = async() => {
                     alt="doctor"
                     width={500}
                     height={100}
+
                   />
                 </Box>
                 <CardContent>
