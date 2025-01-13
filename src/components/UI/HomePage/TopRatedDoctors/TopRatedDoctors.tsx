@@ -11,9 +11,12 @@ const TopRatedDoctors = async() => {
       sx={{
         my: 10,
         py: 30,
-        backgroundColor: "rgba(20, 20, 20, 0.1)",
+        backgroundColor: "rgba(20, 15, 15, 0.4)",
         clipPath: "polygon(0 0, 100% 25%, 100% 100%, 0 75%)",
+        // WebkitClipPath: "polygon(0 0, 100% 25%, 100% 100%, 0 75%)",
+
       }}
+      
     >
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h4" component="h1" fontWeight={700}>
