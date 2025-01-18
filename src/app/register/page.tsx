@@ -16,7 +16,7 @@ import HCForm from "@/components/Forms/HCForm";
 import HCInput from "@/components/Forms/HCInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-export const patientValidationSchema = z.object({
+const patientValidationSchema = z.object({
   name: z.string().min(1, "Please enter your name!"),
   email: z.string().email("Please enter a valid email address!"),
   contactNumber: z
@@ -25,12 +25,12 @@ export const patientValidationSchema = z.object({
   address: z.string().min(1, "Please enter your address!"),
 });
 
-export const validationSchema = z.object({
+const validationSchema = z.object({
   password: z.string().min(6, "Must be at least 6 characters"),
   patient: patientValidationSchema,
 });
 
-export const defaultValues = {
+const defaultValues = {
   password: "",
   patient: {
     name: "",

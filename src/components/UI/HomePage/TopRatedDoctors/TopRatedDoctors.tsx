@@ -6,6 +6,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 const TopRatedDoctors = async() => {
     const res = await fetch("http://localhost:5000/api/v1/doctor?page=1&limit=3");
     const { data: doctors } = await res.json();
+    console.log(res)
   return (
     <Box
       sx={{
@@ -31,7 +32,7 @@ const TopRatedDoctors = async() => {
       </Box>
       <Container sx={{ margin: "30px auto" }}>
         <Grid container spacing={2}>
-          {doctors.map((doctor: any) => (
+          {doctors?.map((doctor: any) => (
             <Grid size={4}>
               <Card>
                 <Box sx={{

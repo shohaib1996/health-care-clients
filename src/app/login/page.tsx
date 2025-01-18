@@ -15,7 +15,7 @@ import HCForm from "@/components/Forms/HCForm"
 import HCInput from "@/components/Forms/HCInput"
 import { useState } from "react"
 
-export const validationSchema = z.object({
+const validationSchema = z.object({
   email: z.string().email("Please enter a valid email address!"),
   password: z.string().min(6, "Must be at least 6 characters"),
 });
@@ -35,7 +35,6 @@ const Login = () => {
       if (res?.data?.accessToken) {
         toast.success(res?.message);
         storeUserInfo({ accessToken: res?.data?.accessToken });
-        router.push("/");
         router.push("/");
       }
       else {
